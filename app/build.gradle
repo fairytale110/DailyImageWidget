@@ -1,0 +1,36 @@
+apply plugin: rootProject.ext.plugins.android
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.sampleMinSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation rootProject.ext.dependencies.junit
+    implementation rootProject.ext.dependencies.appCompat
+    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.constraint_layout
+    implementation rootProject.ext.dependencies.okalle
+    implementation rootProject.ext.dependencies.fastjson
+    debugImplementation rootProject.ext.dependencies.leakcanary
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+//    implementation project(':libdailyimage')
+}

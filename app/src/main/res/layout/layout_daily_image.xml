@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_alignParentStart="true"
+            android:text="2018-09-10" />
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/txt_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="星期二" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_day_of_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="50sp"
+        android:text="6" />
+
+    <TextView
+        android:id="@+id/txt_date_of_china"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="戊戌年，八月二七" />
+
+    <TextView
+        android:id="@+id/txt_progress_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="第 287 天，进度已消耗 87.99%" />
+
+    <ProgressBar
+        android:id="@+id/progress_for_day_of_year"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:progress="78"
+        android:max="100"
+        android:progressDrawable="@drawable/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:paddingTop="20sp"
+        android:paddingBottom="20sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_ancient_poetry_title"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="望月-其一" />
+
+        <TextView
+            android:id="@+id/txt_ancient_poetry_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_ancient_poetry_title"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:layout_marginTop="20sp"
+            android:text="空山新雨后，空气晚来秋" />
+
+        <TextView
+            android:id="@+id/txt_ancient_poetry_author"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20sp"
+            android:layout_below="@id/txt_ancient_poetry_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="杜甫" />
+    </RelativeLayout>
+</LinearLayout>
