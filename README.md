@@ -1,6 +1,7 @@
 
 # DailyImageWidget
 > Android 桌面小部件（widget）日签 Or 日历，可作为桌面日历。Just For Fun! :video_game:
+
 > Android desktop widget, daily check Or calendar,it can be used as a desktop calendar :two_hearts:
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
