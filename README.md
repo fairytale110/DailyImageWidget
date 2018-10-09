@@ -21,7 +21,12 @@
 
 ### How to use this widget
 
-- step1: [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://raw.githubusercontent.com/fairytale110/DailyImageWidget/master/release/DailyImageWidget_1.0.0.apk) and install it on your Android phone, 
+- step1: [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://raw.githubusercontent.com/fairytale110/DailyImageWidget/master/release/DailyImageWidget_1.0.0.apk) 
+or you can scan this QRcode to download 
+
+ ![二维码201810091457.png](https://upload-images.jianshu.io/upload_images/1781452-62e86cb1f5c74bbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+install it on your Android phone, 
 
 - step2: find "DailyImage" from the list of desktop widgets and add it to your desktop.
 
