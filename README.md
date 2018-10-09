@@ -34,15 +34,11 @@ fairytale110@foxmail.com
 :pray: [一言·古诗词 API](https://github.com/xenv/gushici)
 
 ### Author
+```
 fairytale110@foxmail.com
 > 简书: http://jianshu.com/u/d95b27ffdd3c
-
 > 掘金: https://juejin.im/user/596d91ee6fb9a06bb874a800
-
-> CSDN: https://blog.csdn.net/LJYBQ
-
-> MY WEB: https://nicesky.tech
-
+```
 
 ### LICENSE
 
