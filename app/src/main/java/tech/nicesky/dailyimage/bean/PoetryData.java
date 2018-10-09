@@ -78,4 +78,11 @@ public class PoetryData {
         return cacheAt;
     }
 
+
+    @Override
+    public String toString() {
+        return "PoetryData{" +
+                "content='" + content + '\'' +
+                '}';
+    }
 }

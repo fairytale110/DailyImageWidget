@@ -1,9 +1,14 @@
 package tech.nicesky.dailyimage.widget;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -38,6 +43,28 @@ public class DailyImageService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        String CHANNEL_ONE_ID = "tech.nicesky.dailyimage";
+        String CHANNEL_ONE_NAME = "Channel One";
+        NotificationChannel notificationChannel = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            notificationChannel = new NotificationChannel(CHANNEL_ONE_ID,
+                    CHANNEL_ONE_NAME, NotificationManager.IMPORTANCE_HIGH);
+            notificationChannel.enableLights(true);
+            notificationChannel.setLightColor(Color.RED);
+            notificationChannel.setShowBadge(true);
+            notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.createNotificationChannel(notificationChannel);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Notification  notification = new Notification.Builder(this).setChannelId(CHANNEL_ONE_ID).build();
+
+            startForeground(83674, notification);
+            //这个id不要和应用内的其他同志id一样，不行就写 int.maxValue()
+            // context.startForeground(SERVICE_ID, builder.getNotification());
+        }
     }
 
     @Override
@@ -53,6 +80,9 @@ public class DailyImageService extends Service {
     public void onDestroy() {
 
         super.onDestroy();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            stopForeground(Service.STOP_FOREGROUND_REMOVE);
+        }
     }
 
     @Override

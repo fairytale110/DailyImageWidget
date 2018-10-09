@@ -33,6 +33,8 @@ ext {
             leakcanaryFragment : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.1",
 
             okalle              : "com.yanzhenjie:okalle:0.1.4",
-            fastjson            : "com.alibaba:fastjson:1.1.70.android"
+            fastjson            : "com.alibaba:fastjson:1.1.70.android",
+
+            autosize            : "me.jessyan:autosize:0.9.5"
     ]
 }

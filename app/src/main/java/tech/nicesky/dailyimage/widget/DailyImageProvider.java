@@ -4,7 +4,9 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 import tech.nicesky.dailyimage.R;
@@ -32,6 +34,8 @@ public class DailyImageProvider extends AppWidgetProvider {
             appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
         }
 
+        Log.w("xxxxx","onUpdate");
+
     }
 
     /**
@@ -44,6 +48,7 @@ public class DailyImageProvider extends AppWidgetProvider {
 //        if (CLICK_ACTION.equals(intent.getAction())) {
 //            Toast.makeText(context, "hello dog!", Toast.LENGTH_SHORT).show();
 //        }
+        Log.w("xxxxx","onReceive");
     }
 
     /**
@@ -52,6 +57,8 @@ public class DailyImageProvider extends AppWidgetProvider {
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
+
+        Log.w("xxxxx","onDeleted");
     }
 
     /**
@@ -59,8 +66,9 @@ public class DailyImageProvider extends AppWidgetProvider {
      */
     @Override
     public void onDisabled(Context context) {
-        context.stopService(new Intent(context,DailyImageService.class));
         super.onDisabled(context);
+        context.stopService(new Intent(context,DailyImageService.class));
+        Log.w("xxxxx","onDisabled");
     }
 
     /**
@@ -69,7 +77,14 @@ public class DailyImageProvider extends AppWidgetProvider {
     @Override
     public void onEnabled(Context context) {
         super.onEnabled(context);
-        context.startService(new Intent(context,DailyImageService.class));
+        Log.w("xxxxx","onEnabled");
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.startForegroundService(new Intent(context,DailyImageService.class));
+        } else {
+            context.startService(new Intent(context,DailyImageService.class));
+        }
+
     }
 
     /**
@@ -78,6 +93,7 @@ public class DailyImageProvider extends AppWidgetProvider {
     @Override
     public void onAppWidgetOptionsChanged(Context context, AppWidgetManager appWidgetManager, int appWidgetId, Bundle newOptions) {
         super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions);
+        Log.w("xxxxx","onAppWidgetOptionsChanged");
     }
 
     /**
@@ -86,6 +102,7 @@ public class DailyImageProvider extends AppWidgetProvider {
     @Override
     public void onRestored(Context context, int[] oldWidgetIds, int[] newWidgetIds) {
         super.onRestored(context, oldWidgetIds, newWidgetIds);
+        Log.w("xxxxx","onRestored");
     }
 
 }

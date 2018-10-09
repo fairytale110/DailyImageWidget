@@ -39,7 +39,7 @@ public class Origin {
     }
 
     public String getAuthor() {
-        return author;
+        return "---- " + author;
     }
 
     public void setContent(List<String> content) {

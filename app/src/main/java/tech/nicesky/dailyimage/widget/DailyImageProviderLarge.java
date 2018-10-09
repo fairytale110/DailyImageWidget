@@ -4,6 +4,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.RemoteViews;
 
@@ -30,6 +31,16 @@ public class DailyImageProviderLarge extends AppWidgetProvider {
 
         for (int appWidgetId : appWidgetIds) {
             appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
+        }
+
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.startForegroundService(new Intent(context,DailyImageService.class));
+            } else {
+                context.startService(new Intent(context,DailyImageService.class));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -59,6 +70,7 @@ public class DailyImageProviderLarge extends AppWidgetProvider {
     @Override
     public void onDisabled(Context context) {
         super.onDisabled(context);
+        context.stopService(new Intent(context,DailyImageService.class));
     }
 
     /**
@@ -67,6 +79,7 @@ public class DailyImageProviderLarge extends AppWidgetProvider {
     @Override
     public void onEnabled(Context context) {
         super.onEnabled(context);
+
     }
 
     /**

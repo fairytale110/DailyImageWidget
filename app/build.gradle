@@ -27,6 +27,7 @@ dependencies {
     implementation rootProject.ext.dependencies.constraint_layout
     implementation rootProject.ext.dependencies.okalle
     implementation rootProject.ext.dependencies.fastjson
+    implementation rootProject.ext.dependencies.autosize
     debugImplementation rootProject.ext.dependencies.leakcanary
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
