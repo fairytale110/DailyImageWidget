@@ -6,7 +6,7 @@
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/SquaresLoadingView/archive/1.0.0.zip)
+[![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://raw.githubusercontent.com/fairytale110/DailyImageWidget/master/release/DailyImageWidget_1.0.0.apk)
 
 ### Preview
 
@@ -21,7 +21,7 @@
 
 ### How to use this widget
 
-- step1: [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://github.com/fairytale110/SquaresLoadingView/archive/1.0.0.zip) and install it on your Android phone, 
+- step1: [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://raw.githubusercontent.com/fairytale110/DailyImageWidget/master/release/DailyImageWidget_1.0.0.apk) and install it on your Android phone, 
 
 - step2: find "DailyImage" from the list of desktop widgets and add it to your desktop.
 
