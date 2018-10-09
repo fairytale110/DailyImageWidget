@@ -10,7 +10,7 @@
 
 ### Preview
 
-![Screenshot_2018-10-09-12-12-07-694_桌面.png](https://upload-images.jianshu.io/upload_images/1781452-3a1a04a911c50b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Screenshot_2018-10-09-12-12-07-694_桌面.png](https://upload-images.jianshu.io/upload_images/1781452-4ebd49979fc0c30f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ### Features
