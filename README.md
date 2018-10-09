@@ -36,7 +36,7 @@ fairytale110@foxmail.com
 
 :pray: [Idea comes from @renyijiu](https://github.com/renyijiu/daily_image)
 
-:pray: [一言·古诗词 API](https://github.com/xenv/gushici)
+:pray: [一言·古诗词 API](https://www.jinrishici.com/)
 
 ### Author
 ```
