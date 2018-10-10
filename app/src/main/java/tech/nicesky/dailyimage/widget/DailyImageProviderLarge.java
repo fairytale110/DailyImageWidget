@@ -10,6 +10,15 @@ import android.widget.RemoteViews;
 
 import tech.nicesky.dailyimage.R;
 
+
+/**
+* @class tech.nicesky.dailyimage.widget.DailyImageProviderLarge
+* @date on 2018/10/10-上午8:53
+* @author fairytale110
+* @email  fairytale110@foxmail.com
+* @description: Large size AppWidgetProvider
+*
+*/
 public class DailyImageProviderLarge extends AppWidgetProvider {
 
     public DailyImageProviderLarge() {

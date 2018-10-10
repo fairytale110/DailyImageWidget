@@ -2,6 +2,14 @@ package tech.nicesky.dailyimage.util;
 
 import android.text.TextUtils;
 
+/**
+* @class tech.nicesky.dailyimage.util.StringUtils
+* @date on 2018/10/10-上午8:53
+* @author fairytale110
+* @email  fairytale110@foxmail.com
+* @description: N/A
+*
+*/
 public class StringUtils {
 
 

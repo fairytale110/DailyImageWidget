@@ -10,6 +10,14 @@ import tech.nicesky.dailyimage.Constants;
 import tech.nicesky.dailyimage.util.StringUtils;
 
 
+/**
+* @class tech.nicesky.dailyimage.http.HttpEntity
+* @date on 2018/10/10-上午8:51
+* @author fairytale110
+* @email  fairytale110@foxmail.com
+* @description: 网络返回
+*
+*/
 public class HttpEntity implements Parcelable {
 
     @JSONField(name = "status")

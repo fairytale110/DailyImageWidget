@@ -12,6 +12,14 @@ import java.lang.reflect.Type;
 
 import tech.nicesky.dailyimage.R;
 
+/**
+* @class tech.nicesky.dailyimage.http.JsonConverter
+* @date on 2018/10/10-上午8:52
+* @author fairytale110
+* @email  fairytale110@foxmail.com
+* @description: 解析器
+*
+*/
 public class JsonConverter implements Converter {
 
     private Context mContext;

@@ -22,6 +22,9 @@ public class App extends Application {
         initKalle();
     }
 
+    /**
+     * init http lib
+     */
     private void initKalle() {
         KalleConfig config = KalleConfig.newBuilder()
                 .addParam("withCredentials","1")

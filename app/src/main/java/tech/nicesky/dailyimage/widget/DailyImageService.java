@@ -29,13 +29,13 @@ import tech.nicesky.dailyimage.bean.PoetryData;
 import tech.nicesky.dailyimage.util.ChinaDate;
 
 /**
- * chargerlink_v2
- * com.hayukleung.bequiet.ui.widget
- * ClockService.java
- * <p>
- * by hayukleung
- * at 2016-08-30 16:44
- */
+* @class tech.nicesky.dailyimage.widget.DailyImageService
+* @date on 2018/10/10-上午8:54
+* @author fairytale110
+* @email  fairytale110@foxmail.com
+* @description: Service for timer
+*
+*/
 public class DailyImageService extends Service {
 
     private Timer mTimer;
@@ -47,6 +47,7 @@ public class DailyImageService extends Service {
         String CHANNEL_ONE_ID = "tech.nicesky.dailyimage";
         String CHANNEL_ONE_NAME = "Channel One";
         NotificationChannel notificationChannel = null;
+
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             notificationChannel = new NotificationChannel(CHANNEL_ONE_ID,
                     CHANNEL_ONE_NAME, NotificationManager.IMPORTANCE_HIGH);
@@ -59,7 +60,7 @@ public class DailyImageService extends Service {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            Notification  notification = new Notification.Builder(this).setChannelId(CHANNEL_ONE_ID).build();
+            Notification notification = new Notification.Builder(this).setChannelId(CHANNEL_ONE_ID).build();
 
             startForeground(83674, notification);
             //这个id不要和应用内的其他同志id一样，不行就写 int.maxValue()
@@ -92,6 +93,7 @@ public class DailyImageService extends Service {
 
     private final class MyTimerTask extends TimerTask {
         DecimalFormat df = new DecimalFormat("#.00");
+
         @Override
         public void run() {
 
@@ -125,23 +127,23 @@ public class DailyImageService extends Service {
                             remoteView.setTextViewText(R.id.txt_date,
                                     localYear + "-" + localMonth + "-" + localDayOfMonth
 //                     + " "+ realH + ":"+ realM + ":" + realS
-                                           // + "\t\t" + rawH + ":" + rawM
+                                    // + "\t\t" + rawH + ":" + rawM
                             );
 
-                            remoteView.setTextViewText(R.id.txt_day_of_month, ""+ localDayOfMonth);
-                            remoteView.setTextViewText(R.id.txt_week,getWeek());
+                            remoteView.setTextViewText(R.id.txt_day_of_month, "" + localDayOfMonth);
+                            remoteView.setTextViewText(R.id.txt_week, ChinaDate.getWeek());
                             remoteView.setTextViewText(R.id.txt_date_of_china, ChinaDate.today());
 
 
-                            double progressData = (localDayOfYear/365.0)*100;
+                            double progressData = (localDayOfYear / ChinaDate.getDaysOfYear(localYear)) * 100;
 
                             remoteView.setTextViewText(R.id.txt_progress_content,
-                                    "第" + localDayOfYear + "天,进度已经消耗 "+ df.format(progressData) + "%"
-                                    );
-                            remoteView.setProgressBar(R.id.progress_for_day_of_year,100, (int) progressData,false);
+                                    "第" + localDayOfYear + "天,进度已经消耗 " + df.format(progressData) + "%"
+                            );
+                            remoteView.setProgressBar(R.id.progress_for_day_of_year, 100, (int) progressData, false);
                             if (response.isSucceed()) { // Http成功，业务也成功。
                                 PoetryData poetryData = response.succeed();
-                                Log.w("SUCCESS---> ", " " + poetryData.toString());
+                                //Log.w("SUCCESS---> ", " " + poetryData.toString());
 
                                 remoteView.setTextViewText(R.id.txt_ancient_poetry_content, poetryData.getContent());
                                 remoteView.setTextViewText(R.id.txt_ancient_poetry_title, poetryData.getOrigin().getTitle());
@@ -149,7 +151,7 @@ public class DailyImageService extends Service {
 
                             } else {
                                 //Toast.show(response.failed());
-                                Log.w("ERROR---> ", " " + response.failed());
+                                //Log.w("ERROR---> ", " " + response.failed());
                             }
 
                             ComponentName componentName = new ComponentName(getApplicationContext(), DailyImageProvider.class);
@@ -162,29 +164,6 @@ public class DailyImageService extends Service {
             // 当点击Widgets时触发的世界
             // remoteView.setOnClickPendingIntent(viewId, pendingIntent)
 
-        }
-
-        public  String getWeek() {
-            Calendar cal = Calendar.getInstance();
-            int i = cal.get(Calendar.DAY_OF_WEEK);
-            switch (i) {
-                case 1:
-                    return "星期日";
-                case 2:
-                    return "星期一";
-                case 3:
-                    return "星期二";
-                case 4:
-                    return "星期三";
-                case 5:
-                    return "星期四";
-                case 6:
-                    return "星期五";
-                case 7:
-                    return "星期六";
-                default:
-                    return "";
-            }
         }
     }
 }

@@ -46,14 +46,14 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".widget.DailyImageProviderLarge">
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_provider_info_large" />
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-        </receiver>
+        <!--<receiver android:name=".widget.DailyImageProviderLarge">-->
+            <!--<meta-data-->
+                <!--android:name="android.appwidget.provider"-->
+                <!--android:resource="@xml/app_widget_provider_info_large" />-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
 
         <service
             android:name=".widget.DailyImageService"

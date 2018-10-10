@@ -333,6 +333,29 @@ public class ChinaDate {
         return a;
     }
 
+    public static String getWeek() {
+        Calendar cal = Calendar.getInstance();
+        int i = cal.get(Calendar.DAY_OF_WEEK);
+        switch (i) {
+            case 1:
+                return "星期日";
+            case 2:
+                return "星期一";
+            case 3:
+                return "星期二";
+            case 4:
+                return "星期三";
+            case 5:
+                return "星期四";
+            case 6:
+                return "星期五";
+            case 7:
+                return "星期六";
+            default:
+                return "";
+        }
+    }
+
     public static String today() {
         Calendar today = Calendar.getInstance(Locale.SIMPLIFIED_CHINESE);
         int year = today.get(Calendar.YEAR);
@@ -341,8 +364,8 @@ public class ChinaDate {
         long[] l = calElement(year, month, date);
         StringBuffer sToday = new StringBuffer();
         try {
-           // sToday.append(sdf.format(today.getTime()));
-           // sToday.append(" 农历");
+            // sToday.append(sdf.format(today.getTime()));
+            // sToday.append(" 农历");
             sToday.append(cyclical(year));
             sToday.append('(');
             sToday.append(AnimalsYear(year));
@@ -379,6 +402,15 @@ public class ChinaDate {
     private static SimpleDateFormat sdf = new SimpleDateFormat(
             "yyyy年M月d日 EEEEE");
 
+
+    public static boolean isLeapYear(int year) {
+        return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+    }
+
+    public static double getDaysOfYear(int year){
+        return isLeapYear(year) ? 366.0 : 365.0;
+    }
+
     /**
      * 农历日历工具使用演示
      *
@@ -387,5 +419,7 @@ public class ChinaDate {
     public static void main(String[] args) {
         System.out.println(today());
         System.out.println(oneDay(1989, 9, 10));
+        int year = 2000;
+        System.out.print(year + "年是 "+ (isLeapYear(year) ? "闰年" : "平年") + " 有 "+ getDaysOfYear(year) + "天");
     }
 }
