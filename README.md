@@ -6,7 +6,7 @@
 
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)](https://android-arsenal.com/api?level=19) 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://raw.githubusercontent.com/fairytale110/DailyImageWidget/master/release/DailyImageWidget_1.0.0.apk)
+[![Download APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/DailyImageWidget/raw/master/release/DailyImageWidget_1.0.1.apk)
 
 ### Preview
 
@@ -21,10 +21,10 @@
 
 ### How to use this widget
 
-- step1: [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.0-brightgreen.svg) ](https://raw.githubusercontent.com/fairytale110/DailyImageWidget/master/release/DailyImageWidget_1.0.0.apk) 
+- step1: [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/DailyImageWidget/raw/master/release/DailyImageWidget_1.0.1.apk) 
 or you can scan this QRcode to download 
 
- ![二维码201810091457.png](https://upload-images.jianshu.io/upload_images/1781452-62e86cb1f5c74bbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![1.0.1](https://upload-images.jianshu.io/upload_images/1781452-bfd67c372d9bdb84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 install it on your Android phone, 
 
