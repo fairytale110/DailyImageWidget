@@ -8,6 +8,8 @@
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Download APK](https://img.shields.io/badge/Download%20APK-1.0.1-brightgreen.svg) ](https://github.com/fairytale110/DailyImageWidget/raw/master/release/DailyImageWidget_1.0.1.apk)
 
+ [中文 README](https://github.com/fairytale110/DailyImageWidget/blob/master/README_CN.md)
+
 ### Preview
 
 ![Screenshot_2018-10-09-12-12-07-694_桌面.png](https://upload-images.jianshu.io/upload_images/1781452-4ebd49979fc0c30f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
